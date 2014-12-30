@@ -1,0 +1,22 @@
+[user]
+	name = dex1t
+	email = dex1t@degoo.org
+[color]
+	ui = auto
+[alias]
+	co = checkout
+	cm = commit
+	st = status
+	br = branch
+        sh = stash
+        lg = log --pretty=format:'%h -%an ,%ad> %s' --graph --decorate --branches --date=iso --abbrev-commit 
+        lgs = log --graph --decorate --pretty=format:\"%ad [%cn] %h> %n %Cgreen%d%Creset %s %n\" --name-status
+[core]
+	excludesfile = ~/.gitignore
+	editor = /usr/bin/vim
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true

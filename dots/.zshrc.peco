@@ -1,0 +1,56 @@
+# git branch
+alias -g pecobranch='`git branch | peco | sed -e "s/^\*[ ]*//g"`'
+alias g='git co pecobranch'
+
+function kh() {
+  if [ $# -ne 0 ]; then
+    ssh "$@"@`cat ~/.ssh/known_hosts | sed -e "s/^\[//g" | sed -e "s/\].*$//g" | grep "app\|db" | sort | uniq | peco`
+  else
+    ssh `cat ~/.ssh/known_hosts | sed -e "s/^\[//g" | sed -e "s/\].*$//g" | grep "app\|db" | sort | uniq | peco`
+  fi
+}
+
+# integrate all source code with ghq
+peco-src() { peco | while read LINE; do $@ $LINE; done }
+alias cw='ghq list -p | peco-src cd'
+
+# histroy
+function peco-select-history() {
+  typeset tac
+  if which tac > /dev/null; then
+    tac=tac
+  else
+    tac='tail -r'
+  fi
+  BUFFER=$(fc -l -n 1 | eval $tac | peco --query "$LBUFFER")
+  CURSOR=$#BUFFER
+  zle -R -c
+}
+zle -N peco-select-history
+bindkey '^r' peco-select-history
+
+# process kill
+function peco-pkill() {
+  for pid in `ps aux | peco | awk '{ print $2 }'`
+  do
+    kill $pid
+    echo "Killed ${pid}"
+  done
+}
+alias pk="peco-pkill"
+
+# gem source
+_orig_bundle=$(which bundle)
+function bundle() {
+    if [ "$1" = "cd" ]; then
+        local gem
+        if [ "$2" ]; then
+            gem=$2
+        else
+            gem=$($_orig_bundle list | awk '{ print $2 }' | peco)
+        fi
+        cd $($_orig_bundle show $gem)
+    else
+        $_orig_bundle $*
+    fi
+}

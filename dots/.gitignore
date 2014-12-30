@@ -1,0 +1,8 @@
+.DS_Store
+*~
+.tags
+.ctags
+.pryrc
+Procfile.exclude_rails
+.sass-cache
+*.sass-cache*

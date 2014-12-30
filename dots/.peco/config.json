@@ -1,0 +1,14 @@
+{
+    "Prompt": "[peco]",
+        "Keymap": {
+            "C-c": "peco.Cancel",
+            "C-v": "peco.ToggleSelectMode"
+        },
+        "Style": {
+            "Basic": ["on_default", "default"],
+            "SavedSelection": ["on_green", "blue"],
+            "Selected": ["on_blue", "yellow"],
+            "Query": ["on_default", "white"],
+            "Matched": ["red", "bold"]
+        }
+}

@@ -1,0 +1,68 @@
+## Alias configuration
+#
+# expand aliases before completing
+#
+setopt complete_aliases     # aliased ls needs if file/dir completions work
+
+alias where="command -v"
+alias j="jobs -l"
+
+case "${OSTYPE}" in
+freebsd*|darwin*)
+    alias ls="ls -G -w"
+    ;;
+linux*)
+    alias ls="ls --color"
+    ;;
+esac
+
+alias la="ls -a"
+alias ll="ls -l"
+alias lla="ls -la"
+
+alias du="du -h"
+alias df="df -h"
+
+alias tm="tmux"
+alias tma="tmux a"
+alias tml="tmux ls"
+
+alias cl="clear"
+alias reload='source ${HOME}/.zshrc'
+alias bd="cd .."
+
+alias bx="bundle exec"
+alias brl="bundle exec rails"
+alias brs="bundle exec rspec"
+alias brk="bundle exec rake"
+
+alias bf="bundle exec foreman start"
+alias bfs="bundle exec foreman start -f Procfile.exclude_rails"
+
+alias sstop="spring stop"
+alias rl="rails"
+alias rs='rspec'
+alias rk='rake'
+
+alias v='vim'
+alias s='subl'
+
+alias gs='git status'
+alias gh='git stash'
+alias gg="git grep"
+alias gb='git branch'
+alias gc='git checkout'
+alias gm='git commit -v'
+alias gcm='git commit -v'
+alias gd='git diff'
+alias ga='git add'
+alias gap='git add -p'
+alias grb='git rebase'
+alias gps='git push'
+alias gpl='git pull'
+alias gr='git reset'
+
+alias cot="open -a CotEditor"
+alias rm="~/mypath/trash.sh"
+alias rrm="/bin/rm"
+alias gvim="open -a MacVim"

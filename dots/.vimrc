@@ -97,24 +97,10 @@ filetype off
 
 if has('vim_starting')
     set runtimepath+=~/.vim/bundle/neobundle.vim
-    call neobundle#rc(expand('~/.vim/bundle/'))
+    call neobundle#begin(expand('~/.vim/bundle/'))
+    NeoBundleFetch 'Shougo/neobundle.vim'
+    call neobundle#end()
 endif
-
-" スニペット&補完
-NeoBundle 'Shougo/neocomplcache'
-NeoBundleLazy 'Shougo/neosnippet', {
-      \ 'autoload' : {
-      \   'insert' : 1,
-      \ }}
-NeoBundle 'Shougo/neocomplcache-rsense', {
-      \ 'depends': 'Shougo/neocomplcache',
-      \ 'autoload': { 'filetypes': 'ruby' }}
-NeoBundle 'Shougo/vimproc', {
-      \ 'build' : {
-      \     'mac' : 'make -f make_mac.mak',
-      \     'unix' : 'make -f make_unix.mak',
-      \    },
-      \ }
 
 " ファイル操作
 NeoBundle 'git://github.com/scrooloose/nerdtree.git'
@@ -173,48 +159,6 @@ vmap ,s <Plug>NERDCommenterSexy
 "nerd tree
 let g:NERDTreeShowHidden = 1 "ドットファイル表示
 nmap <silent> <special> <F1> :NERDTreeToggle<RETURN>
-
-" rsense
-let g:rsenseHome = "/usr/local/Cellar/rsense/0.3/libexec"
-let g:rsenseUseOmniFunc = 1
-if !exists('g:neocomplcache_omni_patterns')
-    let g:neocomplcache_omni_patterns = {}
-endif
-let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
-
-" neocomplcache
-let g:neocomplcache_enable_at_startup = 1 "起動時有効
-" 大文字小文字を区別する
-let g:NeoComplCache_SmartCase = 1
-" キャメルケース補完を有効にする
-let g:NeoComplCache_EnableCamelCaseCompletion = 1
-" アンダーバー補完を有効にする
-let g:NeoComplCache_EnableUnderbarCompletion = 1
-" シンタックスファイルの補完対象キーワードとする最小の長さ
-let g:NeoComplCache_MinSyntaxLength = 3
-" プラグイン毎の補完関数を呼び出す文字数
-let g:NeoComplCache_PluginCompletionLength = {
-  \ 'keyword_complete'  : 2,
-  \ 'syntax_complete'   : 2
-  \ }
-
-" neocomplcache-snipetts
-autocmd BufEnter * if exists("b:rails_root") | NeoComplCacheSetFileType ruby.rails | endif
-autocmd BufEnter * if (expand("%") =~ "_spec\.rb$") || (expand("%") =~ "^spec.*\.rb$") | NeoComplCacheSetFileType ruby.rspec | endif
-" snippetの配置場所
-let g:neocomplcache_snippets_dir='~/.vim/snippets'
-" Plugin key-mappings.
-" imap <C-k> <Plug>(neocomplcache_snippets_expand)
-" smap <C-K> <Plug>(neocomplcache_snippets_expand)
-imap <C-k> <Plug>(neosnippet_expand_or_jump)
-smap <C-k> <Plug>(neosnippet_expand_or_jump)
-
-" neocom周りのkeymap
-let g:neocomplcache_enable_auto_select = 0
-inoremap <silent><expr><TAB>  pumvisible() ? "\<C-N>" : "\<TAB>"
-inoremap <silent><expr><S-TAB> pumvisible() ? "\<C-P>" : "\<S-TAB>"
-inoremap <silent><expr><BS>   neocomplcache#smart_close_popup()."\<C-h>"
-inoremap <silent><CR>  <CR><C-R>=neocomplcache#smart_close_popup()<CR>
 
 " vim-coffe
 " vimにcoffeeファイルタイプを認識させる

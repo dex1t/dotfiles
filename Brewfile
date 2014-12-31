@@ -1,6 +1,7 @@
 update
 upgrade
 
+install ag
 install autossh
 install chisel
 install direnv

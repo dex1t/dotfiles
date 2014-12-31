@@ -32,7 +32,6 @@ setopt noautoremoveslash
 # no beep sound when complete list displayed
 setopt nolistbeep
 
-
 # Keybind configuration
 bindkey -e
 
@@ -93,16 +92,24 @@ kterm*|xterm*)
     ;;
 esac
 
+#補完機能を使用する
+autoload -U compinit promptinit
+compinit
+zstyle ':completion::complete:*' use-cache true
+zstyle ':completion:*:default' menu select=1
+
 # 補完時に大小文字を区別しない
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
-zstyle ':completion:*' menu select=1
+
+#補完でカラーを使用する
+zstyle ':completion:*' list-colors "${LS_COLORS}"
 
 #zsh補完 git
 if [ -e /usr/local/share/zsh-completions ]; then
     fpath=(/usr/local/share/zsh-completions $fpath)
 fi
 
-#　gitプロンプト表示
+#gitプロンプト表示
 autoload -Uz add-zsh-hook
 autoload -Uz colors
 colors

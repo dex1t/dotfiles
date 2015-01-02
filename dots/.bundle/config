@@ -1,0 +1,3 @@
+---
+BUNDLE_BUILD__MECAB-RUBY: "--with-opt-dir=/usr/local"
+BUNDLE_JOBS: '4'

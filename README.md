@@ -14,7 +14,7 @@ And install brew-bundle ([work around](http://qiita.com/matsu_chara/items/78d0d0
 
 ```bash
 $ brew tap matsu-chara/brew-bundle
-$ install brew-bundle
+$ brew install brew-bundle
 ```
 
 ### 3. Install others by homebrew

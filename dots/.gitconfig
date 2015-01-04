@@ -1,8 +1,14 @@
-[user]
-    name = dex1t
-    email = dex1t@degoo.org
+[include]
+    path = .gitconfig.local
 [color]
     ui = auto
+[core]
+    excludesfile = ~/.gitignore
+    editor = vim
+[merge]
+    ff = false
+[pull]
+    rebase = true
 [alias]
     co = checkout
     cm = commit
@@ -11,13 +17,15 @@
     sh = stash
     lg = log --pretty=format:'%h -%an ,%ad> %s' --graph --decorate --branches --date=iso --abbrev-commit 
     lgs = log --graph --decorate --pretty=format:\"%ad [%cn] %h> %n %Cgreen%d%Creset %s %n\" --name-status
-[core]
-    excludesfile = ~/.gitignore
-    editor = /usr/bin/vim
+    see = browse
+    cafe = browse takaya-deguchi/community
+    ios = browse takaya-deguchi/cafe-ios
 [difftool "sourcetree"]
     cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 [mergetool "sourcetree"]
     cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
     trustExitCode = true
-[branch "master"]
-    mergeoptions = --no-ff
+[merge "mergepbx"]
+    name = Xcode project files merger
+    driver = mergepbx %O %A %B
+

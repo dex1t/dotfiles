@@ -15,5 +15,7 @@ install zsh-completions
 
 tap peco/peco
 install peco
+tap ravenac95/sudolikeaboss
+install sudolikeaboss
 
 cleanup

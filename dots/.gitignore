@@ -2,6 +2,7 @@
 *~
 .tags
 .ctags
-Procfile.exclude_rails
 .sass-cache
 *.sass-cache*
+Procfile.exclude_rails
+.envrc

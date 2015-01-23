@@ -29,3 +29,10 @@
     name = Xcode project files merger
     driver = mergepbx %O %A %B
 
+[user]
+	name = Takaya Deguchi
+	email = takaya-deguchi@cookpad.com
+[filter "media"]
+	clean = git media clean %f
+	smudge = git media smudge %f
+	required = true

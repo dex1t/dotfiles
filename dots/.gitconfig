@@ -20,6 +20,7 @@
     see = browse
     cafe = browse takaya-deguchi/community
     ios = browse takaya-deguchi/cafe-ios
+    ckpd = browse takaya-deguchi/cookpad_all
 [difftool "sourcetree"]
     cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 [mergetool "sourcetree"]

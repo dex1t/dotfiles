@@ -66,3 +66,5 @@ alias cot="open -a CotEditor"
 alias rm="/usr/local/etc/trash.sh"
 alias rrm="/bin/rm"
 alias gvim="open -a MacVim"
+
+alias st='stree'

@@ -26,7 +26,6 @@
 [merge "mergepbx"]
     name = Xcode project files merger
     driver = mergepbx %O %A %B
-
 [user]
 	name = dex1t
 	email = dex1t@degoo.org

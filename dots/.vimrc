@@ -92,15 +92,15 @@ if filereadable(expand('~/.vimrc.server'))
 endif
 
 " !==================== NeoBundle-start ==================== "
-set nocompatible "required
-filetype off
-
+if 0 | endif
 if has('vim_starting')
-    set runtimepath+=~/.vim/bundle/neobundle.vim
-    call neobundle#begin(expand('~/.vim/bundle/'))
-    NeoBundleFetch 'Shougo/neobundle.vim'
-    call neobundle#end()
+  if &compatible
+    set nocompatible
+  endif
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
+call neobundle#begin(expand('~/.vim/bundle/'))
+NeoBundleFetch 'Shougo/neobundle.vim'
 
 " ファイル操作
 NeoBundle 'git://github.com/scrooloose/nerdtree.git'
@@ -140,10 +140,15 @@ NeoBundle 'git://github.com/tpope/vim-fugitive.git' "airline git
 " vim theme
 NeoBundle 'git://github.com/nanotech/jellybeans.vim.git'
 
+call neobundle#end()
+
 filetype plugin indent on     " required!
 filetype indent on
 syntax on
 colorscheme jellybeans
+
+NeoBundleCheck
+
 " /==================== NeoBundle-end ==================== "
 
 "nerd commenter

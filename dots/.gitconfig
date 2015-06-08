@@ -3,7 +3,7 @@
 [color]
     ui = auto
 [core]
-	excludesfile = /Users/takaya-deguchi/.gitignore
+    excludesfile = /Users/takaya-deguchi/.gitignore
     editor = vim
 [merge]
     ff = false
@@ -19,18 +19,19 @@
     lgs = log --graph --decorate --pretty=format:\"%ad [%cn] %h> %n %Cgreen%d%Creset %s %n\" --name-status
     see = browse
 [difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+    cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+    path = 
 [mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+    cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+    trustExitCode = true
 [merge "mergepbx"]
     name = Xcode project files merger
     driver = mergepbx %O %A %B
 [user]
-	name = dex1t
-	email = dex1t@degoo.org
+    username = dex1t
+    name = dex1t
+    email = dex1t@degoo.org
 [filter "media"]
-	clean = git media clean %f
-	smudge = git media smudge %f
-	required = true
+    clean = git media clean %f
+    smudge = git media smudge %f
+    required = true

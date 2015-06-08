@@ -5,3 +5,4 @@ dots/.vim/.netrwhist
 dots/.rbenv/shims
 dots/.rbenv/version
 dots/.rbenv/versions
+dots/.rbenv/plugins

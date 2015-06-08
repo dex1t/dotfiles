@@ -17,7 +17,9 @@
     sh = stash
     lg = log --pretty=format:'%h -%an ,%ad> %s' --graph --decorate --branches --date=iso --abbrev-commit 
     lgs = log --graph --decorate --pretty=format:\"%ad [%cn] %h> %n %Cgreen%d%Creset %s %n\" --name-status
-    see = browse
+    pr = !hub browse -- pull/$(git rev-parse --abbrev-ref HEAD)
+    byme = !hub browse -- issues/created_by/$(git config user.username) && hub browse -- pulls/$(git config user.username)
+    see = !hub browse -- pull/$(git symbolic-ref --short HEAD)
 [difftool "sourcetree"]
     cmd = opendiff \"$LOCAL\" \"$REMOTE\"
     path = 

@@ -17,7 +17,7 @@
     sh = stash
     lg = log --pretty=format:'%h -%an ,%ad> %s' --graph --decorate --branches --date=iso --abbrev-commit 
     lgs = log --graph --decorate --pretty=format:\"%ad [%cn] %h> %n %Cgreen%d%Creset %s %n\" --name-status
-    pr = !hub browse -- pull/$(git rev-parse --abbrev-ref HEAD)
+    pr = !hub browse $(git config remote.origin.url | sed -e 's/git@github.com://' -e 's/.git//') pull/$(git rev-parse --abbrev-ref HEAD)
     byme = !hub browse -- issues/created_by/$(git config user.username) && hub browse -- pulls/$(git config user.username)
     see = !hub browse -- pull/$(git symbolic-ref --short HEAD)
 [difftool "sourcetree"]
@@ -37,3 +37,7 @@
     clean = git media clean %f
     smudge = git media smudge %f
     required = true
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true

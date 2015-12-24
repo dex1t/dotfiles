@@ -45,7 +45,7 @@ alias rs='rspec'
 alias rk='rake'
 
 alias v='vim'
-alias s='subl'
+alias a='atom-beta'
 
 alias gs='git status'
 alias gh='git stash'
@@ -68,3 +68,7 @@ alias rrm="/bin/rm"
 alias gvim="open -a MacVim"
 
 alias st='stree'
+
+alias hl='haml-lint'
+alias sl='scss-lint'
+alias cop='rubocop'

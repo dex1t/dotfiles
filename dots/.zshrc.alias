@@ -67,8 +67,4 @@ alias rm="/usr/local/etc/trash.sh"
 alias rrm="/bin/rm"
 alias gvim="open -a MacVim"
 
-alias st='stree'
-
-alias hl='haml-lint'
-alias sl='scss-lint'
-alias cop='rubocop'
+alias sb='grep -w Host ~/.ssh/conf.d/bitjourney.conf | awk "{print $2}" | peco | xargs -o -n 1 ssh'

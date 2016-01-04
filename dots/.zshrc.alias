@@ -67,4 +67,4 @@ alias rm="/usr/local/etc/trash.sh"
 alias rrm="/bin/rm"
 alias gvim="open -a MacVim"
 
-alias sb='grep -w Host ~/.ssh/conf.d/bitjourney.conf | awk "{print $2}" | peco | xargs -o -n 1 ssh'
+alias sb="grep -w Host ~/.ssh/conf.d/bitjourney.conf | sed -e 's/Host //' | peco | xargs -o -n 1 ssh"

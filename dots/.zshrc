@@ -94,7 +94,7 @@ esac
 
 #補完機能を使用する
 autoload -U compinit promptinit
-compinit
+compinit -u
 zstyle ':completion::complete:*' use-cache true
 zstyle ':completion:*:default' menu select=1
 

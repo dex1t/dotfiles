@@ -9,7 +9,6 @@ install hub
 install jq
 install rbenv
 install rbenv-default-gems
-install rbenv-gem-rehash
 install ruby-build
 install tig
 install tmux

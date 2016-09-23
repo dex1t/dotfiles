@@ -15,6 +15,7 @@ install tmux
 install tree
 install wget
 install zsh-completions
+install git-secrets
 
 tap peco/peco
 install peco

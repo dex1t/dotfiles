@@ -5,7 +5,12 @@ You can check to see if Xcode CLI tools are installed by running the following c
 $ clang --version
 ```
 
-### 2. Install Homebrew
+### 2. Clone this repository
+```bash
+$ git clone git://github.com/dex1t/dotfiles.git
+```
+
+### 3. Install Homebrew
 ```bash
 $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
@@ -17,14 +22,15 @@ $ brew tap matsu-chara/brew-bundle
 $ brew install brew-bundle
 ```
 
-### 3. Install others by homebrew
+### 4. Install others by homebrew
 ```bash
 $ brew bundle
 ```
 
-### 4. Link dotfiles
+### 5. Link dotfiles
 ```bash
 $ ./scripts/symlinks.sh
+$ ln -s ~/dotfiles/scripts/trash.sh /usr/local/etc/trash.sh
 ```
 
 :dancers:

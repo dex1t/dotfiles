@@ -103,7 +103,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 " ファイル操作
-NeoBundle 'git://github.com/scrooloose/nerdtree.git'
+NeoBundle 'https://github.com/scrooloose/nerdtree.git'
 NeoBundle 'wincent/Command-T'
 
 " syntax & indent
@@ -126,19 +126,19 @@ NeoBundleLazy 'taichouchou2/vim-endwise.git', {
       \   'insert' : 1,
       \ } }
 NeoBundle 'AutoClose'
-NeoBundle 'git://github.com/scrooloose/nerdcommenter.git'
+NeoBundle 'https://github.com/scrooloose/nerdcommenter.git'
 NeoBundle 'vim-scripts/ruby-matchit'
 
 " yankのヒストリー
-NeoBundle 'git://github.com/vim-scripts/YankRing.vim.git'
+NeoBundle 'https://github.com/vim-scripts/YankRing.vim.git'
 let g:yankring_history_dir = '$HOME/.vim/'
 
 " vimのstatusline
 NeoBundle 'bling/vim-airline'
-NeoBundle 'git://github.com/tpope/vim-fugitive.git' "airline git
+NeoBundle 'https://github.com/tpope/vim-fugitive.git' "airline git
 
 " vim theme
-NeoBundle 'git://github.com/nanotech/jellybeans.vim.git'
+NeoBundle 'https://github.com/nanotech/jellybeans.vim.git'
 
 call neobundle#end()
 

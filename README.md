@@ -33,4 +33,10 @@ $ ./scripts/symlinks.sh
 $ ln -s ~/dotfiles/scripts/trash.sh /usr/local/etc/trash.sh
 ```
 
+### 6. Settings for vim
+```bash
+$ git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
+$ vim # Run NeoBundleInstall command
+```
+
 :dancers:

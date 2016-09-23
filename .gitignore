@@ -1,5 +1,6 @@
 dots/.vim/yankring_history_v2.txt
 dots/.vim/bundle/*
+dots/.vim/bundle/cache/
 dots/.vim/.netrwhist
 .dropbox
 dots/.rbenv/shims

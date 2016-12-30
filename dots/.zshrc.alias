@@ -45,7 +45,6 @@ alias rs='rspec'
 alias rk='rake'
 
 alias v='vim'
-alias a='atom'
 
 alias gs='git status'
 alias gh='git stash'

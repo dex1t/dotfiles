@@ -1,0 +1,4 @@
+#!/bin/sh                                                                                       
+
+exec ag "$@" . | peco --exec 'awk -F : '"'"'{print "+" $2 " " $1}'"'"' | xargs less '
+

@@ -18,6 +18,7 @@ install zsh-completions
 install peco
 install pyenv
 install envchain
+install node
 
 tap ravenac95/sudolikeaboss
 install sudolikeaboss

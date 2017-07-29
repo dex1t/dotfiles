@@ -141,6 +141,7 @@ setopt no_complete_aliases
 export PATH=$PATH:/System/Library/Frameworks/Ruby.framework/Versions/Current/usr/bin
 export PATH=/usr/local/bin:$PATH:/usr/local/sbin #brew
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 # for node
 export PATH=/usr/local/share/npm/bin:$PATH

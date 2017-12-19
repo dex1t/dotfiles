@@ -30,7 +30,8 @@ $ brew bundle
 ### 5. Link dotfiles
 ```bash
 $ ./scripts/symlinks.sh
-$ ln -s ~/dotfiles/scripts/trash.sh /usr/local/etc/trash.sh
+$ sudo mkdir /opt/mine && sudo chown $(whoami) /opt/mine
+$ ln -s ~/dotfiles/scripts/trash.sh /opt/mine/trash.sh
 ```
 
 ### 6. Settings for vim

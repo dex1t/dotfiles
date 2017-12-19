@@ -142,6 +142,7 @@ export PATH=$PATH:/System/Library/Frameworks/Ruby.framework/Versions/Current/usr
 export PATH=/usr/local/bin:$PATH:/usr/local/sbin #brew
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 export PATH=$HOME/.nodebrew/current/bin:$PATH
+export PATH=/opt/mine:$PATH
 
 # for node
 export PATH=/usr/local/share/npm/bin:$PATH

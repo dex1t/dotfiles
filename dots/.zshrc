@@ -151,10 +151,6 @@ export NODE_PATH=/usr/local/lib/node
 # for heroku
 export PATH="/usr/local/heroku/bin:$PATH"
 
-# for rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-
 # for direnv
 eval "$(direnv hook zsh)"
 

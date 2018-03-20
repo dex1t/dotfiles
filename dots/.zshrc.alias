@@ -62,7 +62,7 @@ alias gpl='git pull'
 alias gr='git reset'
 
 alias cot="open -a CotEditor"
-alias rm="/opt/mine/trash.sh"
+alias rm="/usr/local/bin/trash.sh"
 alias rrm="/bin/rm"
 alias gvim="open -a MacVim"
 

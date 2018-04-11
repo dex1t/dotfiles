@@ -6,3 +6,4 @@
 *.sass-cache*
 Procfile.exclude_rails
 .idea
+.idea/*

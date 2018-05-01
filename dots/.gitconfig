@@ -32,7 +32,7 @@
 [user]
     username = dex1t
     name = dex1t
-    email = dex1t@degoo.org
+    email = dex1t@deg.ooo
 [filter "media"]
     clean = git media clean %f
     smudge = git media smudge %f

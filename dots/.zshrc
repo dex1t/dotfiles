@@ -144,6 +144,13 @@ export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 export PATH=/opt/mine:$PATH
 
+# for android
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
 # for node
 export PATH=/usr/local/share/npm/bin:$PATH
 export NODE_PATH=/usr/local/lib/node

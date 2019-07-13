@@ -23,10 +23,6 @@ alias lla="ls -la"
 alias du="du -h"
 alias df="df -h"
 
-alias tm="tmux"
-alias tma="tmux a"
-alias tml="tmux ls"
-
 alias cl="clear"
 alias reload='source ${HOME}/.zshrc'
 alias bd="cd .."

@@ -10,10 +10,6 @@ function kh() {
   fi
 }
 
-# integrate all source code with ghq
-peco-src() { peco | while read LINE; do $@ $LINE; done }
-alias cw='ghq list -p | peco-src cd'
-
 # histroy
 function peco-select-history() {
   typeset tac
@@ -44,3 +40,6 @@ function bundle-cd() {
   gem=$(bundle list | awk '{ print $2 }' | peco)
   cd $(bundle show $gem)
 }
+
+# change work directory
+alias cw='cd $(ls -d ~/Work/*/* | peco)'

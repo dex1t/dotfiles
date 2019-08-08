@@ -42,4 +42,4 @@ function bundle-cd() {
 }
 
 # change work directory
-alias cw='cd $(ls -d ~/Work/*/* | peco)'
+alias cw='cd $(ls -d ~/Work/*/ | peco)'

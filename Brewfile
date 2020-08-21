@@ -18,6 +18,7 @@ install peco
 install pyenv
 install envchain
 install node
+install nodebrew
 
 tap homebrew/cask || true
 cask install java

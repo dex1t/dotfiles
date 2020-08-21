@@ -3,7 +3,6 @@ upgrade
 
 install ag
 install autossh
-install chisel
 install direnv
 install hub
 install jq
@@ -20,10 +19,7 @@ install pyenv
 install envchain
 install node
 
-tap ravenac95/sudolikeaboss
-install sudolikeaboss
-
-tap caskroom/cask || true
+tap homebrew/cask || true
 cask install java
 
 cleanup

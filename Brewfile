@@ -19,6 +19,8 @@ install pyenv
 install envchain
 install node
 install nodebrew
+install postgresql
+install yarn
 
 tap homebrew/cask || true
 cask install java

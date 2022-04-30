@@ -143,6 +143,7 @@ export PATH=/usr/local/bin:$PATH:/usr/local/sbin #brew
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 export PATH=/opt/mine:$PATH
+export PATH=$HOME/.rbenv/versions/2.7.4/bin:$PATH
 
 # for android
 export ANDROID_HOME=$HOME/Library/Android/sdk

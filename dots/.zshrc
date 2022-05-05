@@ -137,10 +137,16 @@ RPROMPT="%1(v|%F{green}%1v%f%F{cyan}%2v%f|)"
 # git alias complete
 setopt no_complete_aliases
 
+# Homebrew PATH
+export HOMEBREW_PREFIX="/opt/homebrew";
+export HOMEBREW_CELLAR="/opt/homebrew/Cellar";
+export HOMEBREW_REPOSITORY="/opt/homebrew";
+export PATH="/opt/homebrew/bin:/opt/homebrew/sbin${PATH+:$PATH}";
+export MANPATH="/opt/homebrew/share/man${MANPATH+:$MANPATH}:";
+export INFOPATH="/opt/homebrew/share/info:${INFOPATH:-}";
+
 # PATH
 export PATH=$PATH:/System/Library/Frameworks/Ruby.framework/Versions/Current/usr/bin
-export PATH=/usr/local/bin:$PATH:/usr/local/sbin #brew
-export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 export PATH=/opt/mine:$PATH
 export PATH=$HOME/.rbenv/versions/2.7.4/bin:$PATH

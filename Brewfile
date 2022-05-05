@@ -20,7 +20,7 @@ install node
 install nodebrew
 install yarn
 
-tap homebrew/cask || true
-cask install java
+# java
+install zulu
 
 cleanup

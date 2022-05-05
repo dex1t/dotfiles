@@ -35,8 +35,9 @@ $ ln -s ~/dotfiles/scripts/trash.sh /opt/mine/trash.sh
 ```
 
 ### 6. Settings for vim
+Install [neobundle.vim](https://github.com/Shougo/neobundle.vim#1-install-neobundle)
+
 ```bash
-$ git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
 $ vim # Run NeoBundleInstall command
 ```
 

@@ -15,15 +15,9 @@ $ git clone git://github.com/dex1t/dotfiles.git
 $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-And install brew-bundle ([work around](http://qiita.com/matsu_chara/items/78d0d0299a2f45270046))
-
-```bash
-$ brew tap matsu-chara/brew-bundle
-$ brew install brew-bundle
-```
-
 ### 4. Install others by homebrew
 ```bash
+$ brew tap Homebrew/bundle
 $ brew bundle
 ```
 

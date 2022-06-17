@@ -1,26 +1,19 @@
-update
-upgrade
-
-install ag
-install direnv
-install hub
-install jq
-install rbenv
-install rbenv-default-gems
-install ruby-build
-install tig
-install tmux
-install tree
-install wget
-install zsh-completions
-install peco
-install pyenv
-install envchain
-install node
-install nodebrew
-install yarn
-
-# java
-install zulu
-
-cleanup
+brew 'ag'
+brew 'direnv'
+brew 'hub'
+brew 'jq'
+brew 'rbenv'
+brew 'rbenv-default-gems'
+brew 'ruby-build'
+brew 'tig'
+brew 'tmux'
+brew 'tree'
+brew 'wget'
+brew 'zsh-completions'
+brew 'peco'
+brew 'pyenv'
+brew 'envchain'
+brew 'node'
+brew 'nodebrew'
+brew 'yarn'
+brew 'zulu'

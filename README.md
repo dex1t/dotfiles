@@ -21,18 +21,13 @@ $ brew tap Homebrew/bundle
 $ brew bundle
 ```
 
+and install java (zulu)
+
 ### 5. Link dotfiles
 ```bash
 $ ./scripts/symlinks.sh
 $ sudo mkdir /opt/mine && sudo chown $(whoami) /opt/mine
 $ ln -s ~/dotfiles/scripts/trash.sh /opt/mine/trash.sh
-```
-
-### 6. Settings for vim
-Install [neobundle.vim](https://github.com/Shougo/neobundle.vim#1-install-neobundle)
-
-```bash
-$ vim # Run NeoBundleInstall command
 ```
 
 :dancers:

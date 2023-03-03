@@ -76,13 +76,6 @@ map <C-l> <C-w>l<C-w>_
 "split
 noremap ,. :vsp<C-M>
 
-" Rails
-autocmd FileType ruby,eruby,yaml set softtabstop=2 shiftwidth=2 tabstop=2
-autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
-autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
-autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
-let g:rails_level = 4
-
 "環境依存ファイル読み込み
 if filereadable(expand('~/.vimrc.mac'))
     source ~/.vimrc.mac
@@ -90,93 +83,6 @@ endif
 if filereadable(expand('~/.vimrc.server'))
     source ~/.vimrc.server
 endif
-
-" !==================== NeoBundle-start ==================== "
-if 0 | endif
-if has('vim_starting')
-  if &compatible
-    set nocompatible
-  endif
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
-endif
-call neobundle#begin(expand('~/.vim/bundle/'))
-NeoBundleFetch 'Shougo/neobundle.vim'
-
-" ファイル操作
-NeoBundle 'https://github.com/scrooloose/nerdtree.git'
-NeoBundle 'wincent/Command-T'
-
-" syntax & indent
-NeoBundle 'IndentAnything' " Javascript-Indentationが依存
-NeoBundle 'Javascript-Indentation'
-NeoBundle 'JavaScript-syntax'
-NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'hail2u/vim-css3-syntax'
-NeoBundle 'tpope/vim-haml'
-NeoBundle 'othree/html5.vim'
-NeoBundle 'Markdown'
-
-" Rails全般
-NeoBundle 'tpope/vim-rails'
-
-" コーディング補助
-NeoBundle 'surround.vim'
-NeoBundleLazy 'taichouchou2/vim-endwise.git', {
-      \ 'autoload' : {
-      \   'insert' : 1,
-      \ } }
-NeoBundle 'AutoClose'
-NeoBundle 'https://github.com/scrooloose/nerdcommenter.git'
-NeoBundle 'vim-scripts/ruby-matchit'
-
-" yankのヒストリー
-NeoBundle 'https://github.com/vim-scripts/YankRing.vim.git'
-let g:yankring_history_dir = '$HOME/.vim/'
-
-" vimのstatusline
-NeoBundle 'bling/vim-airline'
-NeoBundle 'https://github.com/tpope/vim-fugitive.git' "airline git
-
-" vim theme
-NeoBundle 'https://github.com/nanotech/jellybeans.vim.git'
-
-call neobundle#end()
-
-filetype plugin indent on     " required!
-filetype indent on
-syntax on
-colorscheme jellybeans
-
-NeoBundleCheck
-
-" /==================== NeoBundle-end ==================== "
-
-"nerd commenter
-let g:NERDCreateDefaultMappings = 0 "デフォルトマッピングをオフ
-let NERDSpaceDelims = 1 "コメントの後にスペース
-let NERDShutUp = 1 "未対応ファイルの警告を消す
-nmap ,c <Plug>NERDCommenterToggle
-vmap ,c <Plug>NERDCommenterToggle
-nmap ,a <Plug>NERDCommenterAppend
-nmap ,e <Plug>NERDCommenterToEOL
-vmap ,s <Plug>NERDCommenterSexy
-
-"nerd tree
-let g:NERDTreeShowHidden = 1 "ドットファイル表示
-nmap <silent> <special> <F1> :NERDTreeToggle<RETURN>
-
-" vim-coffe
-" vimにcoffeeファイルタイプを認識させる
-au BufRead,BufNewFile,BufReadPre *.coffee   set filetype=coffee
-" インデントを設定
-autocmd FileType coffee     setlocal sw=2 sts=2 ts=2 et
-
-function! s:css_filetype_settings()
-    setlocal tabstop=2
-    setlocal shiftwidth=2
-    setlocal cindent
-endfunction
-autocmd FileType scss call s:css_filetype_settings()
 
 "-----------------------------------------------------
 "" ステータスライン StatusLine

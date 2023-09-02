@@ -161,6 +161,7 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 # for node
 export PATH=/usr/local/share/npm/bin:$PATH
 export NODE_PATH=/usr/local/lib/node
+export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 # for heroku
 export PATH="/usr/local/heroku/bin:$PATH"
@@ -177,3 +178,4 @@ export PYENV_ROOT=$HOME/.pyenv
 export PATH=$PYENV_ROOT/bin:$PATH
 eval "$(pyenv init -)"
 export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
+

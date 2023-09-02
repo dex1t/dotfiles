@@ -147,7 +147,6 @@ export INFOPATH="/opt/homebrew/share/info:${INFOPATH:-}";
 
 # PATH
 export PATH=$PATH:/System/Library/Frameworks/Ruby.framework/Versions/Current/usr/bin
-export PATH=$HOME/.nodebrew/current/bin:$PATH
 export PATH=/opt/mine:$PATH
 export PATH=$HOME/.rbenv/versions/2.7.4/bin:$PATH
 
@@ -160,7 +159,6 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # for node
 export PATH=/usr/local/share/npm/bin:$PATH
-export NODE_PATH=/usr/local/lib/node
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 # for heroku
